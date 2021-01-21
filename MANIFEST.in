@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lifelineamb *.css
+recursive-include lifelineamb *.csv
+recursive-include lifelineamb *.html
+recursive-include lifelineamb *.ico
+recursive-include lifelineamb *.js
+recursive-include lifelineamb *.json
+recursive-include lifelineamb *.md
+recursive-include lifelineamb *.png
+recursive-include lifelineamb *.py
+recursive-include lifelineamb *.svg
+recursive-include lifelineamb *.txt
+recursive-exclude lifelineamb *.pyc
