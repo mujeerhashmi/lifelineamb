@@ -21,7 +21,26 @@ app_license = "MIT"
 # include js, css files in header of web template
 # web_include_css = "/assets/lifelineamb/css/lifelineamb.css"
 # web_include_js = "/assets/lifelineamb/js/lifelineamb.js"
+web_include_css = [	
+    "assets/lifelineamb/vendor/icofont/icofont.min.css",
+    "assets/lifelineamb/vendor/boxicons/css/boxicons.min.css",
+    "assets/lifelineamb/vendor/remixicon/remixicon.css",
+    "assets/lifelineamb/vendor/venobox/venobox.css",
+    "assets/lifelineamb/vendor/owl.carousel/assets/owl.carousel.min.css",
+    "assets/lifelineamb/vendor/aos/aos.css",
+    "assets/lifelineamb/css/style.css"
+]
 
+web_include_js = [    
+    "assets/lifelineamb/vendor/jquery.easing/jquery.easing.min.js",
+    "assets/lifelineamb/vendor/php-email-form/validate.js",
+    "assets/lifelineamb/vendor/waypoints/jquery.waypoints.min.js",
+    "assets/lifelineamb/vendor/isotope-layout/isotope.pkgd.min.js",
+    "assets/lifelineamb/vendor/venobox/venobox.min.js",
+    "assets/lifelineamb/vendor/owl.carousel/owl.carousel.min.js",
+    "assets/lifelineamb/vendor/aos/aos.js",
+    "assets/lifelineamb/js/main.js"
+]
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "lifelineamb/public/scss/website"
 
@@ -42,7 +61,7 @@ app_license = "MIT"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "index"
 
 # website user home page (by Role)
 # role_home_page = {
