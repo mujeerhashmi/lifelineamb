@@ -63,6 +63,14 @@ web_include_js = [
 # application home page (will override Website Settings)
 home_page = "index"
 
+default_mail_footer = """
+	<span>
+		Sent via
+		<a class="text-muted" href="https://lifelineambulance.in?source=via_email_footer" target="_blank">
+			LifeLine Ambulance
+		</a>
+	</span>
+"""
 # website user home page (by Role)
 # role_home_page = {
 #	"Role": "home_page"

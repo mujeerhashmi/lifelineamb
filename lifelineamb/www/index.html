@@ -1,6 +1,6 @@
 {% extends "templates/web.html" %}
 {% set full_width=1 %}
-{% set title = heading or "Always in Safe Hands" %}
+{% set title = heading or "LifeLine Ambulance" %}
 
 {% block page_content %}
 <!-- ======= Hero Section ======= -->
@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                 data-aos="fade-up" data-aos-delay="200">
-                <h1>LifeLine Ambulance Service</h1>
+                <h1>LifeLine Ambulance</h1>
                 <h2>Always in Safe Hands</h2>
                 <div class="d-lg-flex">
                     <a href="#about" class="btn-get-started scrollto">Get Started</a>
@@ -127,7 +127,7 @@
 </section><!-- End Cta Section -->
 
 <!-- ======= Services Us Section ======= -->
-<section id="about" class="about">
+<section id="services" class="services section-bg">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
             <h2>Our Services</h2>
@@ -150,8 +150,41 @@
     </div>
 </section><!-- End Services Section -->
 
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Our Ambulance</h2>
+            <p>Well Equipped and Professionally Designed Ambulance.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            {% if categories %} {% for cat in categories %}
+            <li data-filter=".filter-{{cat['category']}}">{{cat['category']}}</li>
+            {% endfor %}{% endif %}
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            {% if gallery_images %} {% for image in gallery_images %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-{{image['category']}}">
+                <div class="portfolio-img"><img src="{{image['image']}}" class="img-fluid" alt="">
+                </div>
+                <div class="portfolio-info">
+                    <h4>{{image['title']}}</h4>
+                    <a href="{{image['image']}}" data-gall="portfolioGallery" class="venobox preview-link"
+                        title="{{image['title']}}"><i class="bx bx-plus"></i></a>
+                </div>
+            </div>
+            {% endfor %} {% endif %}
+        </div>
+
+    </div>
+</section><!-- End Portfolio Section -->
+
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
+<section id="contact" class="contact section-bg">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">

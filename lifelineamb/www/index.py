@@ -1,30 +1,21 @@
-# Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
-# MIT License. See license.txt
-
 from __future__ import unicode_literals
 
 import frappe
 from frappe.utils import now
 from frappe import _
 
-sitemap = 1
+no_cache = 1
+no_sitemap = 1
 
 def get_context(context):
-	doc = frappe.get_doc("Contact Us Settings", "Contact Us Settings")
-
-	if doc.query_options:
-		query_options = [opt.strip() for opt in doc.query_options.replace(",", "\n").split("\n") if opt]
-	else:
-		query_options = ["Sales", "Support", "General"]
+	gallery_images = frappe.get_all('Gallery Image', fields=['title','category', 'image'], order_by="title")
+	categories = frappe.get_all('Gallery Image', fields='category', group_by='category')
 
 	out = {
-		"query_options": query_options,
-		"parents": [
-			{ "name": _("Home"), "route": "/" }
-		]
+		"gallery_images": gallery_images,
+		"categories": categories
 	}
-	out.update(doc.as_dict())
-
+	
 	return out
 
 max_communications_per_hour = 1000
