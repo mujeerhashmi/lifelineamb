@@ -169,7 +169,7 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             {% if gallery_images %} {% for image in gallery_images %}
             <div class="col-lg-4 col-md-6 portfolio-item filter-{{image['category']}}">
-                <div class="portfolio-img"><img loading=lazy src="{{image['image']}}" class="img-fluid" alt="">
+                <div class="portfolio-img"><img src="{{image['image']}}" class="img-fluid" alt="">
                 </div>
                 <div class="portfolio-info">
                     <h4>{{image['title']}}</h4>
