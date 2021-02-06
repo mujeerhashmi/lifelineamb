@@ -28,7 +28,8 @@ web_include_css = [
     "assets/lifelineamb/vendor/venobox/venobox.css",
     "assets/lifelineamb/vendor/owl.carousel/assets/owl.carousel.min.css",
     "assets/lifelineamb/vendor/aos/aos.css",
-    "assets/lifelineamb/css/style.css"
+    "assets/lifelineamb/css/style.css",
+    "https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css"
 ]
 
 web_include_js = [    
@@ -39,7 +40,8 @@ web_include_js = [
     "assets/lifelineamb/vendor/venobox/venobox.min.js",
     "assets/lifelineamb/vendor/owl.carousel/owl.carousel.min.js",
     "assets/lifelineamb/vendor/aos/aos.js",
-    "assets/lifelineamb/js/main.js"
+    "assets/lifelineamb/js/main.js",
+    "https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"
 ]
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "lifelineamb/public/scss/website"

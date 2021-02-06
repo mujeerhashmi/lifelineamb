@@ -232,6 +232,13 @@
 })(jQuery);
 
 jQuery(document).ready(function ($) {
+  $("#WAButton").floatingWhatsApp({
+    phone: "919132432491", //WhatsApp Business phone number International format-
+    buttonImage:
+      '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+    position: "right",
+  });
+
   $("form.contactForm").submit(function () {
     var f = $(this).find(".form-group"),
       ferror = false,
@@ -346,16 +353,16 @@ jQuery(document).ready(function ($) {
 
     var email = $('[name="email"]').val();
     var message = $('[name="message"]').val();
-    
+
     frappe.send_message(
       {
         subject: $('[name="subject"]').val(),
         sender: email,
-        message: message,        
+        message: message,
         callback: function (r) {
           $(".loading").removeClass("show");
           if (r.message === "okay") {
-            $(".sent-message").addClass("show");            
+            $(".sent-message").addClass("show");
             $(".error-message").removeClass("show");
             $(".contactForm").find("input, textarea").val("");
           } else {
